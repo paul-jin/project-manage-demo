@@ -2,7 +2,8 @@
   <div>
     <el-input v-model="projectName"
               placeholder="Please key project name for search"
-              allowClear>
+              allowClear
+              style="margin: 10px; width: 40%">
     </el-input>
 
     <el-table :data="projectList.filter(element => !projectName || element.name.toLowerCase().includes(projectName.toLowerCase()))"
@@ -21,7 +22,6 @@
                        width="90">
       </el-table-column>
 
-      </el-table-column>
       <el-table-column label="Dashboards"
                        prop="dashboards"
                        width="90">
